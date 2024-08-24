@@ -51,7 +51,7 @@ class HomePage extends StatelessWidget {
                     minWidth: double.infinity,
                     height: 60,
                     onPressed: () {
-                     
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
                     },
                     shape: RoundedRectangleBorder(
                       side: const BorderSide(
@@ -83,7 +83,7 @@ class HomePage extends StatelessWidget {
                       minWidth: double.infinity,
                       height: 60,
                       onPressed: () {
-                      
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => SignupPage()));
                       },
                       color: const Color.fromARGB(255, 231, 55, 55),
                       elevation: 0,
