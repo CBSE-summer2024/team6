@@ -1,9 +1,9 @@
-### Mart.ps App Improvement Project
+# Mart.ps App Improvement Project
 ## Project Overview
 ## Project Name
-# Mart.ps App Improvement
-# team6
-# Project Description
+### Mart.ps App Improvement
+### team6
+## Project Description
 This project focuses on improving the components of the Mart.ps mobile application, a leading online sales platform in Palestine. The website offers a wide range of products including clothes, jewelry, shoes, household items, etc.
 We aimed to enhance the user experience by improving critical components such as the login and sign-up pages and the product search results page. We aimed to align our improvements with the existing design identity of Mart.ps while optimizing functionality.
 ## Project Goals
