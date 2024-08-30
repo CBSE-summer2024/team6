@@ -1,5 +1,6 @@
 package com.example.native_navigation.search
 
+import androidx.activity.viewModels
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -13,11 +14,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.KeyboardArrowDown
-import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.InputChip
@@ -26,35 +25,32 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.example.native_navigation.MainViewModel
 import com.example.native_navigation.R
 import com.example.native_navigation.components.CustomCard
 import com.example.native_navigation.components.SearchTextField
-import com.example.native_navigation.model.CardUiModel
 import com.example.native_navigation.ui.theme.AndroidTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SearchScreen(
+    viewModel: MainViewModel ,
     onBackClicked: () -> Unit = { }
 ) {
-    val items = (1..100).map {
-        CardUiModel(
-            title = "Cap",
-            description = "Dorothy Perkins",
-            isFavorite = it % 2 == 0,
-            oldPrice = 21,
-            currentPrice = 14,
-            photo = "https://i.pinimg.com/474x/17/31/a2/1731a2e94e7608749f7e9a7526ad9173.jpg",
-            numOfStars = it % 5 + 1
-        )
-    }
+    val items by viewModel.searchResults.collectAsState()
+    val queryText by viewModel.searchQueryStateFlow.collectAsState()
+
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         containerColor = MaterialTheme.colorScheme.onBackground,
@@ -82,8 +78,8 @@ fun SearchScreen(
 
                     SearchTextField(
                         modifier = Modifier.weight(.8f),
-                        searchText = "",
-                        onSearchTextChange = {}
+                        searchText = queryText,
+                        onSearchTextChange = viewModel::onSearchTextChange
                     )
 
                     Icon(
@@ -110,6 +106,19 @@ fun SearchScreen(
             }
         }
     ) { padding ->
+        if (items.isEmpty()) {
+            Box(
+                modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.Center
+            ){
+                Text(
+                    textAlign = TextAlign.Center,
+                    text = "No Result Found",
+                    fontSize = 22.sp,
+                    color = Color.Gray
+                )
+            }
+        }
         LazyVerticalGrid(
             modifier = Modifier
                 .fillMaxSize()
@@ -151,6 +160,6 @@ private fun Category(text:String){
 @Composable
 fun SearchScreenPreview() {
     AndroidTheme {
-        SearchScreen()
+        SearchScreen(viewModel = MainViewModel())
     }
 }

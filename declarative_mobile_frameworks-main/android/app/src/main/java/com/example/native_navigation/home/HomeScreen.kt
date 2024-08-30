@@ -1,5 +1,7 @@
 package com.example.native_navigation.home
 
+import android.content.Intent
+import androidx.activity.ComponentActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -28,7 +30,8 @@ import com.example.native_navigation.ui.theme.AndroidTheme
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
-    onSearchClicked: () -> Unit = {}
+    onSearchClicked: () -> Unit = {},
+    onBack: () -> Unit = {}
 ) {
     Scaffold(
         modifier = Modifier.fillMaxSize(),
@@ -45,7 +48,7 @@ fun HomeScreen(
                 Icon(
                     modifier = Modifier
                         .padding(10.dp)
-                        .clickable { },
+                        .clickable { onBack.invoke() },
                     imageVector = Icons.Default.Menu,
                     contentDescription = null,
                     tint = Color.Black
