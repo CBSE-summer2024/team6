@@ -18,4 +18,4 @@ We aimed to enhance the user experience by improving critical components such as
 In this project, we focused on redesigning the Mart.ps app to enhance the user experience while preserving the original identity and branding of the website. We used the same website colors
 The redesign included improvements to the user interface (UI) and use experience (UX) components, such as the login and sign-up pages, and the product search results page.
 
-You can view our Figma design file here: [Figma File - Mart.ps App Improvement] (https://www.figma.com/design/mGgneQ0Bac1BMedANecQBM/Mart.ps?node-id=69-331&t=largrcf6YktiizV6-1).
+You can view our Figma design file here: [Figma File - Mart.ps App Improvement](https://www.figma.com/design/mGgneQ0Bac1BMedANecQBM/Mart.ps?node-id=69-331&t=largrcf6YktiizV6-1).
