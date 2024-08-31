@@ -44,11 +44,70 @@ class MainViewModel @Inject constructor(
     fun onSearchTextChange(searchText: String) {
         _searchQueryStateFlow.value = searchText
     }
-    init{
-        _itemsStateFlow.value = (1..100).map {
+
+    init {
+        //mock data
+        _itemsStateFlow.value = listOf(
             CardUiModel(
-                title = "Cap$it",
-                description = "Dorothy Perkins",
+                title = "Dress",
+                description = "Pink Dress",
+                isFavorite = true,
+                oldPrice = 60,
+                currentPrice = 40,
+                photo = "https://media.istockphoto.com/id/1440977634/photo/vertical-shot-of-the-beautiful-pink-dress-isolated-on-the-white-background.jpg?s=612x612&w=0&k=20&c=3lSPxjs-xh7PGeW2eGnPlawyw9gcJPlnc1QWnwnkNyI=",
+                numOfStars = 5
+            ),
+            CardUiModel(
+                title = "Jaket",
+                description = "Jaket bomber pria terbaru",
+                isFavorite = true,
+                oldPrice = 21,
+                currentPrice = 14,
+                photo = "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2023/1/20/55825998-7ab3-4a72-82cc-3406f260a171.jpg",
+                numOfStars = 4
+            ),
+            CardUiModel(
+                title = "Sneakers",
+                description = "White Sneakers for Men",
+                isFavorite = false,
+                oldPrice = 80,
+                currentPrice = 50,
+                photo = "https://cdn.pixabay.com/photo/2016/11/19/18/06/feet-1840619_640.jpg",
+                numOfStars = 4
+            ),
+            CardUiModel(
+                title = "Watch",
+                description = "Luxury Men's Watch",
+                isFavorite = true,
+                oldPrice = 250,
+                currentPrice = 180,
+                photo = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnJeP50BQ1dkR0_D7a8n0AQyptM1hBooNwEg&s",
+                numOfStars = 5
+            ),
+            CardUiModel(
+                title = "Sunglasses",
+                description = "Stylish Sunglasses",
+                isFavorite = false,
+                oldPrice = 120,
+                currentPrice = 85,
+                photo = "https://m.media-amazon.com/images/I/31NvXL-aMrL._AC_UY1100_.jpg",
+                numOfStars = 4
+            ),
+            CardUiModel(
+                title = "Handbag",
+                description = "Designer Handbag",
+                isFavorite = true,
+                oldPrice = 320,
+                currentPrice = 280,
+                photo = "https://wwd.com/wp-content/uploads/2023/03/designer-handbag-lead-art.jpg?w=911&h=510&crop=1",
+                numOfStars = 5
+            )
+        )
+
+        _itemsStateFlow.value += (1..100).map {
+            CardUiModel(
+                title = "Dress$it",
+                description = "Dress",
                 isFavorite = it % 2 == 0,
                 oldPrice = 21,
                 currentPrice = 14,
