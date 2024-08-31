@@ -101,4 +101,16 @@ The deployment of the Mart.ps microfrontend application follows a streamlined pr
 
 This deployment strategy, managed through a single production environment and utilizing Gradle, ensures that the Mart.ps mobile application is delivered consistently and reliably to end-users.
 
+## 📱 Screen Shots
+<img width="329" alt="Screenshot 2024-08-31 at 15 34 44" src="https://github.com/user-attachments/assets/385b4446-95b0-48cc-9c10-dd354a57ee26">
+<img width="333" alt="Screenshot 2024-08-31 at 15 35 01" src="https://github.com/user-attachments/assets/52580d4c-33a3-4e1d-971d-9f3d139d2998">
+<img width="326" alt="Screenshot 2024-08-31 at 15 35 32" src="https://github.com/user-attachments/assets/7e52dd0c-1fd2-4be7-8772-e49066b8492b">
+<img width="329" alt="Screenshot 2024-08-31 at 15 35 48" src="https://github.com/user-attachments/assets/48010e28-ec2f-4d3f-8235-3838a36ce060">
+<img width="332" alt="Screenshot 2024-08-31 at 15 37 16" src="https://github.com/user-attachments/assets/5015e105-2ae4-4517-8b00-19c460dc1229">
+<img width="332" alt="Screenshot 2024-08-31 at 15 37 37" src="https://github.com/user-attachments/assets/bfc01a22-9604-4cf8-b037-96f2d7b230c2">
+<img width="330" alt="Screenshot 2024-08-31 at 15 37 53" src="https://github.com/user-attachments/assets/b76b3e1e-e2ff-4c66-97f3-2cc1d2bbfac0">
+
+
+
+
 
