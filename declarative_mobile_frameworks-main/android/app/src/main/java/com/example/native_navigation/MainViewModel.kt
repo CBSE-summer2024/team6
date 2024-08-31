@@ -104,6 +104,7 @@ class MainViewModel @Inject constructor(
             )
         )
 
+
         _itemsStateFlow.value += (1..100).map {
             CardUiModel(
                 title = "Dress$it",
