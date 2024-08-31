@@ -21,11 +21,6 @@ We aimed to enhance the user experience by improving critical components such as
 ![Component-architecture6](https://github.com/user-attachments/assets/2a2a2780-179d-4ff3-97c2-4d083f1289c8)
 # 2. Event-driven Architecture
 ![Component-architecture5](https://github.com/user-attachments/assets/4a530815-aca0-44a6-8752-753cbe5016fa)
-# 3. Microservicses flow:
-![Component-architecture1](https://github.com/user-attachments/assets/fac13ef4-93a8-4644-8b35-36351a50a2c5)
-![Component-architecture2](https://github.com/user-attachments/assets/4236eba4-3ab5-47a9-b209-9ccc54f169b2)
-![Component-architecture3](https://github.com/user-attachments/assets/d9275906-7b34-408d-936a-cb110e7c3056)
-![Component-architecture4](https://github.com/user-attachments/assets/89342ee6-b04b-4065-a509-a77c55974764)
 
 ## 🎨 Figma Design File
 In this project, we focused on redesigning the Mart.ps app to enhance the user experience while preserving the original identity and branding of the website. We used the same website colors
