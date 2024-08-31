@@ -28,3 +28,27 @@ In this project, we focused on redesigning the Mart.ps app to enhance the user e
 The redesign included improvements to the user interface (UI) and use experience (UX) components, such as the login and sign-up pages, and the product search results page.
 
 You can view our Figma design file here: [Figma File - Mart.ps App Improvement](https://www.figma.com/design/mGgneQ0Bac1BMedANecQBM/Mart.ps?node-id=69-331&t=largrcf6YktiizV6-1).
+
+## 🧩 Microfrontend Architecture: Kotlin and Flutter
+The chosen microfrontend architecture combines Kotlin and Flutter to leverage their respective strengths in mobile development.
+
+- **Kotlin** is used for native Android components, providing seamless integration with Android and strong performance.
+- **Flutter** is utilized for developing other components of the application, offering cross-platform capabilities and rich UI/UX features.
+
+This architecture enables modular and scalable development, allowing teams to work independently on different parts of the application. This promotes rapid development and simplifies maintenance.
+
+## 🔗 Communication Model: Publish-Subscribe (Pub-Sub) Pattern
+The communication between microfrontends is managed through a Publish-Subscribe (Pub-Sub) pattern using communication channels.
+
+- **Publisher:** A component that sends messages on specific topics without knowing which components will receive them.
+- **Subscriber:** Components that listen for relevant messages and react accordingly.
+
+This model decouples the components, ensuring that changes in one part of the application do not directly affect others. It enhances the robustness of the system and facilitates easy scaling or modifications.
+
+## 🚀 Deployment Strategy: Integration via APK
+Microfrontends are deployed and integrated into the main application through APK files.
+
+- Each microfrontend is developed, tested, and packaged as a separate module.
+- These modules are then combined into a single APK during the build process.
+
+This strategy allows each microfrontend to be updated independently, eliminating the need for a complete rebuild of the entire application. This approach speeds up the release cycle and simplifies the deployment process.
