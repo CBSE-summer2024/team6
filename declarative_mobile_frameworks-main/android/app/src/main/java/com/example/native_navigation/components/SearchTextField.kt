@@ -54,9 +54,9 @@ fun SearchTextField(
             onSearchTextChange(it)
         },
         singleLine = true,
-        cursorBrush = SolidColor(MaterialTheme.colorScheme.secondary),
+        cursorBrush = SolidColor(Color.Black),
         textStyle = TextStyle(
-            color = MaterialTheme.colorScheme.secondary,
+            color = Color.Black,
             fontSize = 20.sp
         ),
         decorationBox = { innerTextField ->
@@ -82,9 +82,7 @@ fun SearchTextField(
                         innerTextField()
                     }
                     IconButton(
-                        onClick = {
-                            onSearchTextChange("")
-                        },
+                        onClick = { onSearchTextChange("") },
                         modifier = Modifier.size(24.dp)
                     ) {
                         Icon(
@@ -107,7 +105,7 @@ fun SearchTextField(
 
 @Preview
 @Composable
-fun SearchTextFieldPreview(){
+fun SearchTextFieldPreview() {
     AndroidTheme {
         SearchTextField(
             searchText = "",

@@ -1,19 +1,25 @@
-package com.example.native_navigation.home
+package com.example.native_navigation.search
 
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
+import com.example.native_navigation.MainViewModel
 
-const val HOME_ROUTE = "home_route"
 
-fun NavController.navigateToHome(navOptions: NavOptions? = null) =
-    navigate(HOME_ROUTE, navOptions)
+const val SEARCH_ROUTE = "search_route"
 
-fun NavGraphBuilder.homeScreen(
-    onSearchClicked: () -> Unit
+fun NavController.navigateToSearch(navOptions: NavOptions? = null) =
+    navigate(SEARCH_ROUTE, navOptions)
+
+fun NavGraphBuilder.searchScreen(
+    viewModel: MainViewModel,
+    onBackClicked: () -> Unit
 ) {
-    composable(route = HOME_ROUTE) {
-        HomeScreen(onSearchClicked = onSearchClicked)
+    composable(route = SEARCH_ROUTE) {
+        SearchScreen(
+            viewModel = viewModel,
+            onBackClicked = onBackClicked
+        )
     }
 }
