@@ -76,5 +76,25 @@ While integrating microfrontends, several challenges may arise:
 
 By addressing these challenges with strategic solutions, the integration of microfrontends can enhance the Mart.ps mobile application's modularity and maintainability while providing a seamless user experience.
 .
+## 🚀 Deployment
+
+### Deployment Process
+The deployment of the Mart.ps microfrontend application follows a streamlined process to ensure efficient integration and release:
+
+1. **Build Process:** The entire application, including all microfrontends developed in Kotlin and Flutter, is built together using Gradle. This unified build process ensures that all components are compiled and packaged simultaneously, maintaining compatibility and reducing complexity.
+
+2. **Integration:** Microfrontends are integrated directly within the main application as part of the single APK build. This approach ensures that all components are seamlessly combined into one cohesive application without the need for independent modules.
+
+3. **Testing:** The integrated APK undergoes testing, including UI tests, to verify that all features work as expected across the entire application.
+
+5. **Release:** The finalized APK is deployed directly to the production environment. This ensures that users receive a single, consistent application experience with each update.
+
+### Deployment Environment
+- **Production Environment:** The single deployment environment where the application is made available to end-users. This environment requires the highest level of stability and security to ensure a reliable and seamless user experience.
+
+### Deployment Tool
+- **Gradle:** The primary tool used for building, integrating, and managing dependencies of all microfrontends. Gradle handles the entire process from compiling the source code to packaging the final APK, ensuring a smooth and efficient deployment pipeline.
+
+This deployment strategy, managed through a single production environment and utilizing Gradle, ensures that the Mart.ps mobile application is delivered consistently and reliably to end-users.
 
 
