@@ -50,10 +50,10 @@ The communication between microfrontends is managed through a Publish-Subscribe 
 This model decouples the components, ensuring that changes in one part of the application do not directly affect others. It enhances the robustness of the system and facilitates easy scaling or modifications.
 
 ## 🚀 Deployment Strategy: Integration via APK
-Microfrontends are deployed and integrated into the main application through APK files.
+Microfrontends are deployed and integrated into the main application through a single APK file.
 
-- Each microfrontend is developed, tested, and packaged as a separate module.
-- These modules are then combined into a single APK during the build process.
+- All microfrontends are developed, tested, and integrated together within the main application.
+- During the build process, these components are combined and packaged into a single APK, ensuring a seamless and unified application experience for users.
 
 This strategy allows each microfrontend to be updated independently, eliminating the need for a complete rebuild of the entire application. This approach speeds up the release cycle and simplifies the deployment process.
 
