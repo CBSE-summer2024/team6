@@ -99,7 +99,49 @@ The deployment of the Mart.ps microfrontend application follows a streamlined pr
 ### Deployment Tool
 - **Gradle:** The primary tool used for building, integrating, and managing dependencies of all microfrontends. Gradle handles the entire process from compiling the source code to packaging the final APK, ensuring a smooth and efficient deployment pipeline.
 
-This deployment strategy, managed through a single production environment and utilizing Gradle, ensures that the Mart.ps mobile application is delivered consistently and reliably to end-users.
+
+## 🏁 Getting Started
+
+### Prerequisites
+Before you begin, ensure you have the following software and tools installed:
+
+- **Flutter SDK**: [Flutter Installation Guide](https://flutter.dev/docs/get-started/install)
+- **Kotlin**: [Kotlin Setup](https://kotlinlang.org/docs/tutorials/getting-started.html)
+- **Android Studio**: For Android development [Download Android Studio](https://developer.android.com/studio)
+
+### Installation
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/CBSE-summer2024/team6.git
+   
+2. **Install Dependencies**
+- For Flutter:
+  ```bash
+   flutter pub get
+- For Kotlin: Open the project in Android Studio and sync the Gradle files.
+
+3. **Running the Project**
+- Start the Flutter Application
+   ```bash
+   flutter run
+  
+- Build the Kotlin Components Use Android Studio to run or debug the native Android modules.
+
+## 🛠 Development Workflow
+**Development Tools**
+- **Flutter**: For developing cross-platform components.
+- **Kotlin**: For native Android components.
+- **Gradle**: For build automation.
+- **Git**: For version control.
+
+
+## 📚 Resources
+
+### Deployment Guides
+- **Deploying Flutter Apps Across Platforms:** A comprehensive guide to deploying Flutter applications on iOS, Android, and the web.  
+  [Read the full article here](https://medium.com/@chetan.akarte/how-do-you-deploy-flutter-apps-to-different-platforms-ios-android-web-511b65f4388a#:~:text=To%20deploy%20a%20Flutter%20app%20to%20the%20web%2C%20you%20need,flutter%20config%20%E2%80%94%20enable%2Dweb.&text=%C2%B7-,Open%20your%20Flutter%20project%20in%20a%20terminal%20and%20run%20flutter,web%20version%20of%20your%20app.)
+
 
 ## 📱 Screen Shots
 <img width="329" alt="Screenshot 2024-08-31 at 15 34 44" src="https://github.com/user-attachments/assets/385b4446-95b0-48cc-9c10-dd354a57ee26">
@@ -109,8 +151,3 @@ This deployment strategy, managed through a single production environment and ut
 <img width="332" alt="Screenshot 2024-08-31 at 15 37 16" src="https://github.com/user-attachments/assets/5015e105-2ae4-4517-8b00-19c460dc1229">
 <img width="332" alt="Screenshot 2024-08-31 at 15 37 37" src="https://github.com/user-attachments/assets/bfc01a22-9604-4cf8-b037-96f2d7b230c2">
 <img width="330" alt="Screenshot 2024-08-31 at 15 37 53" src="https://github.com/user-attachments/assets/b76b3e1e-e2ff-4c66-97f3-2cc1d2bbfac0">
-
-
-
-
-
